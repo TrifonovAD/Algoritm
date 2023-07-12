@@ -34,6 +34,9 @@ public class Main {
 //        list.print();
         list.quickSort();
         list.print();
+        list.reverse();
+        System.out.println();
+        list.print();
 
     }
 }
