@@ -1,4 +1,4 @@
-package lection1;
+package lection2;
 
 public class Sort {
     public static void main(String[] args) {
