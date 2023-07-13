@@ -163,6 +163,21 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+    public void reverse() {
+        Node prevNode = null;
+        Node currentNode = root;
+        Node nextNode = null;
+
+        while (currentNode != null) {
+            nextNode = currentNode.next;
+            currentNode.next = prevNode;
+            prevNode = currentNode;
+            currentNode = nextNode;
+        }
+
+        root = prevNode;
+    }
+
     private class Node {
         T value;
         Node next;
