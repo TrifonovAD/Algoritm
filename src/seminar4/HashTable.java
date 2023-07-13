@@ -58,6 +58,7 @@ public class HashTable<K, V> {
     private void resize() {
         List <K, V> [] oldLists = lists;
         lists = new List[(int)(oldLists.length * RESIZE_COEFFICIENT)];
+        size = 0;
         for (int i = 0; i < oldLists.length; i++) {
             List<K, V> list = oldLists[i];
             if (list == null)
