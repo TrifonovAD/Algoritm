@@ -63,6 +63,7 @@ public class RedBlackTree {
         Node uncle = getUncleNode(node, parent, grandParent);
         if (uncle != null && uncle.color == Color.red) {
             swapColors(grandParent);
+            balanceTree(grandParent);
             return;
         }
         if (parent == grandParent.left) {
